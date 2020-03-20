@@ -59,17 +59,17 @@ public class Solution_GoogleCalendar {
             if (!booked[i]) {
                 counter[1]++;
             } else {
-                check(counter, result);
+                check(counter, step, result);
                 counter[0] = i + leftBorder;
                 counter[1] = i + leftBorder;
             }
         }
-        check(counter, result);
+        check(counter, step, result);
         return result;
     }
 
-    private static void check(final int[] counter, final Collection<String[]> result) {
-        if (counter[0] != counter[1]) {
+    private static void check(final int[] counter, final int step, final Collection<String[]> result) {
+        if (counter[1] - counter[0] >= step) {
             result.add(new String[]{ fromm(counter[0] + 1), fromm(counter[1] + 1) });
         }
     }
