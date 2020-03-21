@@ -12,6 +12,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>14</java.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
     </properties>
 
     <build>
@@ -25,4 +26,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections4.version}</version>
+        </dependency>
+    </dependencies>
 </project>
