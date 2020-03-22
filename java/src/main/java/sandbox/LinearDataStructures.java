@@ -1,11 +1,16 @@
-package youtube;
+package sandbox;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Stack;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Vector;
@@ -13,19 +18,75 @@ import org.apache.commons.collections4.bag.HashBag;
 
 import static java.util.stream.Collectors.joining;
 
-public class DataStructures {
+public class LinearDataStructures {
 
     public static void main(String[] args) {
 //        linkedListTest();
 //        hashSetTest();
 //        linkedHashSetTest();
 //        hashMapTest();
+//        hashMapTest2();
 //        hashtableTest();
 //        arrayListTest();
 //        vectorTest();
 //        treeSetTest();
 //        treeMapTest();
-        bagTest();
+//        bagTest();
+//        queueTest();
+//        stackTest();
+//        priorityQueue();
+    }
+
+    private static void priorityQueue() {
+        // internal implementation is array. null is not allowed.
+        // Should either define comparator or objects have to implement Comparator.
+        final var queue = new PriorityQueue<>(Comparator.comparingInt(HashObject::hashCode));
+        queue.add(new HashObject(12));
+        queue.add(new HashObject(10));
+        queue.add(new HashObject(22));
+        queue.add(new HashObject(112));
+        System.out.println(queue.stream().map(String::valueOf).collect(joining(",")));
+    }
+
+    private static void stackTest() {
+        // internal implementation is array. null is allowed.
+        final Stack<Integer> stack = new Stack<>();
+        stack.add(1);
+        stack.pop();
+        stack.peek();
+        stack.add(null);
+        stack.pop();
+        stack.add(5);
+        stack.pop();
+        stack.add(7);
+        stack.pop();
+        stack.add(71);
+        stack.pop();
+        stack.add(41);
+        System.out.println(stack.stream().map(String::valueOf).collect(joining(",")));
+    }
+
+    private static void queueTest() {
+        // nulls are not allowed. Internal implementation is array. It stores elements in cycling manner. Holding
+        // head and tail positions.
+        final ArrayDeque<Integer> queue = new ArrayDeque<>(4);
+        queue.add(1);
+        queue.poll();
+        queue.add(12);
+        queue.poll();
+        queue.add(5);
+        queue.poll();
+        queue.add(7);
+        queue.poll();
+        queue.add(71);
+        queue.poll();
+        queue.add(41);
+
+        final var el = queue.peek();
+        System.out.println(el);
+        final var el2 = queue.poll();
+        System.out.println(el2);
+        System.out.println(queue.stream().map(String::valueOf).collect(joining(",")));
     }
 
     private static void bagTest() {
@@ -124,14 +185,25 @@ public class DataStructures {
         System.out.println(map.entrySet().stream().map(String::valueOf).collect(joining(",")));
     }
 
+    private static void hashMapTest2() {
+        // Testing Hash Map with the objects that return different hash code but will be stored under the same index
+        // in internal array. To summarize: collision might be not only in the situations when hash code are the same
+        // but when bitwise AND operation will return the same index (even for different hash code).
+        final HashMap<Object, Integer> map = new HashMap<>();
+        map.put(new HashObject(3306), 1);
+        map.put(new HashObject(3322), 1);
+        final var val = map.get(new HashObject(3306));
+        System.out.println(val);
+    }
+
     private static void hashMapTest() {
         // HashMap -> array of nodes. key is ((size - 1) & hash).
-        // if object returns the same hashcode but instances are different and equals() is false,
-        // it stores it under the same hashcode as linked list. Otherwise, it overrides value (actually 1 node).
-        // This situation might be happened when you override hashcode but don't override equals OR (very rare) when
-        // two absolutely different objects return the same hash code. That's why technically the worst case scenario
-        // of retrieving value is O(n) (if all objects will return the same hashcode but are not equal) but in fact it's
-        // O(1) as only one node stores under 1 key.
+        // if object returns the same hashcode but instances are different and equals() is false, it stores it under
+        // the same hashcode as linked list. Otherwise, it overrides value (actually 1 node). This situation might be
+        // happened when you override hashcode but don't override equals OR (very rare) when two absolutely different
+        // objects return the same hash code. That's why technically the worst case scenario of retrieving value is O(n)
+        // (if all objects will return the same hashcode but are not equal) but in fact it's O(1) as only one node
+        // stores under 1 key.
         final HashMap<Object, Integer> map = new HashMap<>();
         map.put("k1", 2);
         map.put("k1", 3);
@@ -223,6 +295,25 @@ public class DataStructures {
                 return Integer.compare(this.f, ((NullHash) o).f);
             }
             return toString().compareTo(o.toString());
+        }
+    }
+
+    private static class HashObject {
+
+        private int hash;
+
+        public HashObject(int hash) {
+            this.hash = hash;
+        }
+
+        @Override
+        public int hashCode() {
+            return hash;
+        }
+
+        @Override
+        public String toString() {
+            return "HashObject#" + hashCode();
         }
     }
 }
