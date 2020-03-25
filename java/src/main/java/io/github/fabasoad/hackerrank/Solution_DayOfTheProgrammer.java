@@ -1,5 +1,8 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
+/**
+ * https://www.hackerrank.com/challenges/day-of-the-programmer/problem
+ */
 public class Solution_DayOfTheProgrammer {
 
     public static void main(String[] args) {

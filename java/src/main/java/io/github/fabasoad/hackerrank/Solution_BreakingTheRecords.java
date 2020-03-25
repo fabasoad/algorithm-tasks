@@ -1,7 +1,10 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.Arrays;
 
+/**
+ * https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
+ */
 public class Solution_BreakingTheRecords {
 
     public static void main(String[] args) {

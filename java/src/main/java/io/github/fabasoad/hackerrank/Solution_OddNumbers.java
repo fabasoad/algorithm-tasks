@@ -1,4 +1,4 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 import java.io.*;
 import java.util.*;
 import java.util.stream.*;

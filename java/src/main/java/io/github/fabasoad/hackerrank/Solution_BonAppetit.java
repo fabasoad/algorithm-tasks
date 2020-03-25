@@ -1,10 +1,13 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.List;
 import java.util.stream.IntStream;
 
 import static java.util.Arrays.asList;
 
+/**
+ * https://www.hackerrank.com/challenges/bon-appetit/problem
+ */
 public class Solution_BonAppetit {
 
     public static void main(String[] args) {

@@ -1,10 +1,7 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.io.*;
-import java.math.*;
-import java.text.*;
 import java.util.*;
-import java.util.regex.*;
 import java.util.stream.IntStream;
 
 public class Solution_Test {

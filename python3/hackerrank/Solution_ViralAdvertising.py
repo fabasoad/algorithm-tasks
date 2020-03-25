@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/strange-advertising/problem
 import math
 
 def viralAdvertising(n):

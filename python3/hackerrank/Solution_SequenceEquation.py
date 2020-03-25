@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/permutation-equation/problem
 def permutationEquation(p):
     calc = lambda a: [p.index(x) + 1 for x in a]
     return [el for el in calc(calc(range(1, len(p) + 1)))]

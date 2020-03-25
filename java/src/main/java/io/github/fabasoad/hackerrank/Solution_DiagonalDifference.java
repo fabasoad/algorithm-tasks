@@ -1,9 +1,12 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
+/**
+ * https://www.hackerrank.com/challenges/diagonal-difference/problem
+ */
 public class Solution_DiagonalDifference {
 
     public static void main(String[] args) {

@@ -1,5 +1,8 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
+/**
+ * https://www.hackerrank.com/challenges/staircase/problem
+ */
 public class Solution_Staircase {
 
     public static void main(String[] args) {

@@ -1,13 +1,15 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import static java.util.Arrays.asList;
 
+/**
+ * https://www.hackerrank.com/challenges/migratory-birds/problem
+ */
 public class Solution_MigratoryBirds {
 
     public static void main(String[] args) {

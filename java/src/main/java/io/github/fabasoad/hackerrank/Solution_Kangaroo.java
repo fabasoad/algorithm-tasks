@@ -1,5 +1,8 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
+/**
+ * https://www.hackerrank.com/challenges/kangaroo/problem
+ */
 public class Solution_Kangaroo {
 
     public static void main(String[] args) {

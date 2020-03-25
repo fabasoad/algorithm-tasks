@@ -1,7 +1,10 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.Objects;
 
+/**
+ * https://www.hackerrank.com/challenges/time-conversion/problem
+ */
 public class Solution_TimeConversion {
 
     public static void main(String[] args) {

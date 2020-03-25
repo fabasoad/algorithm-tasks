@@ -1,8 +1,11 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+ */
 public class Solution_BirthdayCakeCandles {
 
     public static void main(String[] args) {

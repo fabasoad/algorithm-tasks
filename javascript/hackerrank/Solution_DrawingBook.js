@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/challenges/drawing-book/problem
 function assertEquals(actual, expected) {
     if (actual !== expected) {
         throw `${actual} !== ${expected}`;

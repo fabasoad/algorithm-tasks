@@ -1,4 +1,4 @@
-package youtube;
+package io.github.fabasoad.youtube;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;

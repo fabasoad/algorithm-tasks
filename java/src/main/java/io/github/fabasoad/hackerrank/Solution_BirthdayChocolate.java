@@ -1,14 +1,17 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 
+/**
+ * https://www.hackerrank.com/challenges/the-birthday-bar/problem
+ */
 public class Solution_BirthdayChocolate {
 
     public static void main(String[] args) {
-        System.out.println(birthday(asList(4), 4, 1));
+        System.out.println(birthday(singletonList(4), 4, 1));
     }
 
     static int birthday(List<Integer> s, int d, int m) {

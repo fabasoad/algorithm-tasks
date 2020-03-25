@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/picking-numbers/problem
 def pickingNumbers(a):
     a.sort()
     max_num = 0

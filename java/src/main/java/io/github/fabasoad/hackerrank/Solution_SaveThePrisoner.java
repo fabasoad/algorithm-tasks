@@ -1,5 +1,8 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
+/**
+ * https://www.hackerrank.com/challenges/save-the-prisoner/problem
+ */
 public class Solution_SaveThePrisoner {
 
     public static void main(String[] args) {

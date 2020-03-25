@@ -1,5 +1,8 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
+/**
+ * https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
+ */
 public class Solution_DivisibleSumPairs {
 
     public static void main(String[] args) {

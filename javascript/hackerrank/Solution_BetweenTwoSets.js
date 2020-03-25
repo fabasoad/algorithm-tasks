@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/challenges/between-two-sets/problem
 function getTotalX(a, b) {
     let minA = Math.min(...a);
     let minB = Math.min(...b);

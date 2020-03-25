@@ -1,7 +1,10 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.stream.LongStream;
 
+/**
+ * https://www.hackerrank.com/challenges/a-very-big-sum/problem
+ */
 public class Solution_VeryBigSum {
 
     public static void main(String[] args) {

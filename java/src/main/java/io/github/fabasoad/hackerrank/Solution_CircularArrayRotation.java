@@ -1,8 +1,11 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
 
+/**
+ * https://www.hackerrank.com/challenges/circular-array-rotation/problem
+ */
 public class Solution_CircularArrayRotation {
 
     public static void main(String[] args) {

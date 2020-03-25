@@ -1,7 +1,10 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.Arrays;
 
+/**
+ * https://www.hackerrank.com/challenges/apple-and-orange/problem
+ */
 public class Solution_AppleAndOrange {
 
     public static void main(String[] args) {

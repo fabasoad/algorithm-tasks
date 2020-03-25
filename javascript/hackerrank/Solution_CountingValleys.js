@@ -1,4 +1,4 @@
-// Complete the countingValleys function below.
+// https://www.hackerrank.com/challenges/counting-valleys/problem
 function countingValleys(n, s) {
     const op = { 'U': 1, 'D': -1 };
     let step = 0;

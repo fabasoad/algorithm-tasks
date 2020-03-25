@@ -1,9 +1,10 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
-import java.util.stream.IntStream;
 import java.util.stream.LongStream;
-import java.util.stream.Stream;
 
+/**
+ * https://www.hackerrank.com/challenges/mini-max-sum/problem
+ */
 public class Solution_MiniMaxSum {
 
     private static void sum(long... a) {

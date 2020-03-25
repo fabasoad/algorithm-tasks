@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/designer-pdf-viewer/problem
 def designerPdfViewer(h, word):
     return max([h[ord(ch) - ord('a')] for ch in word]) * len(word)
 

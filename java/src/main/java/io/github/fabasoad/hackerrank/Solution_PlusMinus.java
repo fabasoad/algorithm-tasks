@@ -1,4 +1,4 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * https://www.hackerrank.com/challenges/plus-minus/problem
+ */
 public class Solution_PlusMinus {
 
     public static void main(String[] args) {

@@ -1,8 +1,11 @@
-package hackerrank;
+package io.github.fabasoad.hackerrank;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://www.hackerrank.com/challenges/grading/problem
+ */
 public class Solution_GradingStudents {
 
     public static void main(String[] args) {

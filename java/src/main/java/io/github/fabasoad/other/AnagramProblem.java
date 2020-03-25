@@ -1,4 +1,4 @@
-package other;
+package io.github.fabasoad.other;
 
 import java.util.Arrays;
 import java.util.HashMap;
