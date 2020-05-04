@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 
 /**
- * https://www.youtube.com/watch?v=IWvbPIYQPFM
+ * https://youtu.be/IWvbPIYQPFM
  */
 public class Solution_LongestPath {
 
