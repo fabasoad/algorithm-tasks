@@ -7,13 +7,13 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Solution_RiverSizes",
+      "name": "MostCommonWord",
       "runtimeArgs": [
         "-r",
         "ts-node/register"
       ],
       "args": [
-        "${workspaceFolder}/algoexpert/easy/Solution_RiverSizes.ts"
+        "${workspaceFolder}/leetcode/easy/Solution_MostCommonWord.ts"
       ]
     }
   ]
