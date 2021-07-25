@@ -19,7 +19,7 @@
   }
 
   function deleteDuplicates(head: ListNode | null): ListNode | null {
-    let head1: ListNode | null = new ListNode(0, head);
+    let head1: ListNode | null = new ListNode(-101 /* Constraints are [-100,100] */, head);
     let node: ListNode | null = head1;
 
     while (node != null) {
