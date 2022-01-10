@@ -13,7 +13,7 @@ public class Solution_1381 {
       }
     }
 
-    private int maxSize;
+    private final int maxSize;
     private int size;
     private Node head;
     private Node tail;
