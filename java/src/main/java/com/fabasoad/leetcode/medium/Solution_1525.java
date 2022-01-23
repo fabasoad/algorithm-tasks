@@ -1,30 +1,25 @@
 package com.fabasoad.leetcode.medium;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class Solution_1525 {
 
-  private int calculateDistinct(Map<String, Integer> map, String str) {
-    map.computeIfAbsent(str, (k) -> {
-      final Set<Character> set = new HashSet<>();
-      for (int j = 0; j < k.length(); j++) {
-        set.add(k.charAt(j));
-      }
-      return set.size();
-    });
-    return map.get(str);
-  }
-
   public int numSplits(String s) {
-    final Map<String, Integer> map = new HashMap<>();
+    int[] left = new int[s.length() - 1];
+    int[] right = new int[s.length() - 1];
+    final Set<Character> setL = new HashSet<>();
+    final Set<Character> setR = new HashSet<>();
+    int to = s.length() - 1;
+    for (int i = 0; i < to; i++) {
+      setL.add(s.charAt(i));
+      left[i] = setL.size();
+      setR.add(s.charAt(to - i));
+      right[to - i - 1] = setR.size();
+    }
     int res = 0;
-    for (int i = 1; i < s.length(); i++) {
-      String left = s.substring(0, i);
-      String right = s.substring(i);
-      if (calculateDistinct(map, left) == calculateDistinct(map, right)) {
+    for (int i = 0; i < s.length() - 1; i++) {
+      if (left[i] == right[i]) {
         res++;
       }
     }
