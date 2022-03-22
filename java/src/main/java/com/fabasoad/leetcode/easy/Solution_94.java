@@ -33,7 +33,13 @@ public class Solution_94 {
   }
 
   public static void main(String[] args) {
-    final List<Integer> res = inorderTraversal(new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null)));
+    //     1
+    //        2
+    //     3
+    List<Integer> res = inorderTraversal(new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null)));
+    System.out.println(res);
+    // ./solution_94_1.png
+    res = inorderTraversal(new TreeNode(20, new TreeNode(9, new TreeNode(5), new TreeNode(12, new TreeNode(11), new TreeNode(14))), new TreeNode(25)));
     System.out.println(res);
   }
 }

@@ -17,7 +17,7 @@ public class Solution_46 {
       return sublist;
     }
     int num = up[0];
-    List<List<Integer>> ans=new ArrayList<>();
+    List<List<Integer>> ans = new ArrayList<>();
     for (int i = 0; i <= p.size(); i++) {
       List<Integer> new1 = new ArrayList<>(p.subList(0, i));
       new1.add(num);
