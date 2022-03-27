@@ -18,7 +18,7 @@ class ReverseLinkedList {
   // stack: 4 1 2 3
   // resultHead: 3
   // node: 3 2 1 4 null
-  public static Node<Integer> reverseLinkedList(Node<Integer> head) {
+  public static Node<Integer> reverseLinkedList2(Node<Integer> head) {
     final var stack = new Stack<Node<Integer>>();
     Node<Integer> node = head;
     while (node != null) {
@@ -40,6 +40,18 @@ class ReverseLinkedList {
       node.next = null;
     }
     return resultHead;
+  }
+
+  private static Node<Integer> reverseLinkedList(Node<Integer> head) {
+    Node<Integer> curr = head;
+    Node<Integer> prev = null;
+    while (curr != null) {
+      Node<Integer> next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    return prev;
   }
 
   public static void main(String[] args) {

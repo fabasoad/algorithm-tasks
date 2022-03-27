@@ -14,9 +14,7 @@ class SittingAtTheRoundTable {
 
   private List<List<Integer>> permutation(List<Integer> p, int[] up) {
     if (up.length == 0) {
-      List<List<Integer>> sublist = new ArrayList<>();
-      sublist.add(p);
-      return sublist;
+      return List.of(p);
     }
     int num = up[0];
     List<List<Integer>> ans=new ArrayList<>();
