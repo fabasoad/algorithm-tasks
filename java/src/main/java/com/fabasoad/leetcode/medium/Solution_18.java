@@ -2,10 +2,8 @@ package com.fabasoad.leetcode.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 public class Solution_18 {
@@ -14,9 +12,9 @@ public class Solution_18 {
     while (from <= to) {
       int mid = (to - from) / 2 + from;
       if (nums[mid] < target) {
-        from++;
+        from = mid + 1;
       } else if (nums[mid] > target) {
-        to--;
+        to = mid - 1;
       } else {
         return true;
       }
