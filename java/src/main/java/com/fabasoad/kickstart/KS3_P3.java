@@ -1,46 +1,47 @@
 package com.fabasoad.kickstart;
 
-import java.util.AbstractMap;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
 public class KS3_P3 {
 
-  private static AbstractMap.SimpleImmutableEntry<Integer, Integer> newCoords(AbstractMap.SimpleImmutableEntry<Integer, Integer> coords, char direction) {
-    return switch (direction) {
-      case 'E' -> createTuple(coords.getKey(), coords.getValue() + 1);
-      case 'W' -> createTuple(coords.getKey(), coords.getValue() - 1);
-      case 'S' -> createTuple(coords.getKey() + 1, coords.getValue());
-      case 'N' -> createTuple(coords.getKey() - 1, coords.getValue());
-      default -> createTuple(coords.getKey() + 1, coords.getValue() + 1);
-    };
+  private static int[] newCoords(int r, int c, char direction) {
+    switch (direction) {
+      case 'E':
+        return new int[]{r, c + 1};
+      case 'W':
+        return new int[]{r, c - 1};
+      case 'S':
+        return new int[]{r + 1, c};
+      case 'N':
+        return new int[]{r - 1, c};
+      default:
+        return new int[]{r + 1, c + 1};
+    }
   }
 
-  private static AbstractMap.SimpleImmutableEntry<Integer, Integer> createTuple(int r, int c) {
-    return new AbstractMap.SimpleImmutableEntry<>(r, c);
-  }
-
-  private static AbstractMap.SimpleImmutableEntry<Integer, Integer> move(
-      Set<AbstractMap.SimpleImmutableEntry<Integer, Integer>> set,
-      int R, int C, int Sr, int Sc, String instructions, int moveIndex) {
-    AbstractMap.SimpleImmutableEntry<Integer, Integer> n1 = createTuple(Sr, Sc);
-    if (!set.contains(n1)) {
+  private static int[] move(
+      Map<Integer, Set<Integer>> map, int Sr, int Sc, String instructions, int moveIndex) {
+    map.putIfAbsent(Sr, new HashSet<>());
+    if (!map.get(Sr).contains(Sc)) {
       moveIndex++;
-      set.add(n1);
+      map.get(Sr).add(Sc);
     }
     if (moveIndex == instructions.length()) {
-      return n1;
+      return new int[] {Sr, Sc};
     }
-    final AbstractMap.SimpleImmutableEntry<Integer, Integer> n2 = newCoords(n1, instructions.charAt(moveIndex));
-    return move(set, R, C, n2.getKey(), n2.getValue(), instructions, moveIndex);
+    final int[] n2 = newCoords(Sr, Sc, instructions.charAt(moveIndex));
+    return move(map, n2[0], n2[1], instructions, moveIndex);
   }
 
   private static int[] endPosition(int N, int R, int C, int Sr, int Sc, String instructions) {
-    final Set<AbstractMap.SimpleImmutableEntry<Integer, Integer>> set = new HashSet<>();
-    set.add(createTuple(Sr, Sc));
-    final AbstractMap.SimpleImmutableEntry<Integer, Integer> res = move(set, R, C, Sr, Sc, instructions, 0);
-    return new int[] { res.getKey(), res.getValue() };
+    final Map<Integer, Set<Integer>> map = new HashMap<>();
+    map.put(Sr, new HashSet<>());
+    map.get(Sr).add(Sc);
+    return move(map, Sr, Sc, instructions, 0);
   }
 
   public static void main(String[] args) {
