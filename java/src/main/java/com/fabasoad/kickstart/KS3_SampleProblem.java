@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class KS3_P1 {
+public class KS3_SampleProblem {
   // Object for Input
   static Scanner inputObject = new Scanner(System.in);
 

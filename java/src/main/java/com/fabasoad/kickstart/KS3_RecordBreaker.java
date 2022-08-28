@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class KS3_P2 {
+public class KS3_RecordBreaker {
 
   public static void main(String args[]) {
     try (Scanner inputObject = new Scanner(System.in)) {

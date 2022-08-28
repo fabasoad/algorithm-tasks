@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-public class KS3_P3 {
+public class KS3_WiggleWalk {
 
   private static int[] endPosition(int N, int R, int C, int Sr, int Sc, String instructions) {
     final Map<Integer, Set<Integer>> map = new HashMap<>();
