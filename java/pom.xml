@@ -10,9 +10,9 @@
 
     <properties>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>17</java.version>
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-        <commons-collections4.version>4.4</commons-collections4.version>
+        <java.version>25</java.version>
+        <maven-compiler-plugin.version>4.0.0-beta-3</maven-compiler-plugin.version>
+        <commons-collections4.version>4.5.0</commons-collections4.version>
     </properties>
 
     <build>
